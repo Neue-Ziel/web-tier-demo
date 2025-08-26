@@ -1,0 +1,65 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "subscriptionId": {
+            "value": {}
+        },
+        "siteName": {
+            "value": "demonginxstatic"
+        },
+        "location": {
+            "value": "Australia Southeast"
+        },
+        "hostingPlanName": {
+            "value": "asp-web-demo"
+        },
+        "alwaysOn": {
+            "value": false
+        },
+        "ftpsState": {
+            "value": "FtpsOnly"
+        },
+        "sku": {
+            "value": "Basic"
+        },
+        "skuCode": {
+            "value": "B1"
+        },
+        "workerSize": {
+            "value": "0"
+        },
+        "workerSizeId": {
+            "value": "0"
+        },
+        "numberOfWorkers": {
+            "value": "2"
+        },
+        "linuxFxVersion": {
+            "value": "sitecontainers"
+        },
+        "siteContainerName": {
+            "value": "main"
+        },
+        "siteContainerProperty": {
+            "value": {
+                "image": "merkava/nginx-custome-welcome:latest",
+                "targetPort": "80",
+                "isMain": true,
+                "startUpCommand": "",
+                "authType": "Anonymous",
+                "userManagedIdentityClientId": null,
+                "userName": null,
+                "passwordSecret": null
+            }
+        },
+        "tags": {
+            "value": {
+                "application": "global360demo",
+                "tier": "web",
+                "owner": "team1",
+                "environment": "dev"
+            }
+        }
+    }
+}

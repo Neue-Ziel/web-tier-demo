@@ -1,9 +1,9 @@
 # A Web Tier Demo for an interview
 ## Files
- - README.md    # *This file*
- - images       # *Contains architectural diagrams of this file*
- - dockerfile   # *Contains the file for build the docker image of an NGINX static web server*
- - iac          # *Contains the ARM Template for provision the infrastructure*
+ - **README.md**    # *This file*
+ - **images**       # *Contains architectural diagrams of this file*
+ - **dockerfile**   # *Contains the file for build the docker image of an NGINX static web server*
+ - **iac**          # *Contains the ARM Template for provision the infrastructure*
 
 ## 0. How to Deploy
 
@@ -15,7 +15,6 @@ az deployment group create --resource-group '<RESOURCE_GROUP_NAME>' --name <DEPL
 **Azure PowerShell**
 ```
 New-AzResourceGroup -Name '<RESOURCE_GROUP_NAME>' -Location australiasoutheast
-
 New-AzResourceGroupDeployment -ResourceGroupName <RESOURCE_GROUP_NAME> -Name <DEPLOYMENT_NAME> -TemplateFile iac\template.json -TemplateParameterFile iac\parameters.json -subscriptionId <SUBSCRIPTION_ID> -serverFarmResourceGroup <RESOURCE_GROUP_NAME>
 ```
 ## 1. Objective
